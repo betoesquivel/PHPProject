@@ -1,6 +1,7 @@
 /**
  * Created by LuisAlberto on 5/4/2015.
  */
+$("#lblExamen").hide();
 function getExam(){
     var opD = document.getElementById("dia");
     var dia= opD.options[opD.selectedIndex].value.trim();
@@ -16,6 +17,10 @@ function getExam(){
 }
 function desplegarSigno() {
 
-    panel = document.getElementById("lblExamen");
-    panel.innerHTML= req.responseText;
+    panel = $("#lblExamen");
+    panel.innerText= req.responseText;
+    if ( !panel.is(":visible") ){
+       panel.toggle();
+    }
+
 }
