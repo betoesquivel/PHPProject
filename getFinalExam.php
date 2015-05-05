@@ -13,7 +13,7 @@ if (!$conn) {
 
 $hora = $_GET['hora'];
 $dia = $_GET['dia'];
-$sql = "SELECT fechaexamen FROM examenes where horario='".$hora ."' and dias='".$dia."';";
+$sql = "SELECT fechaexamen FROM examenes where horario='".$hora ."' and dias='".$dia."' LIMIT 1;";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -22,7 +22,7 @@ if (mysqli_num_rows($result) > 0) {
         echo $row["fechaexamen"];
     }
 } else {
-    echo "0 results";
+    echo "No hay examen esa fecha";
 }
 
 mysqli_close($conn);
