@@ -7,25 +7,10 @@
         td {padding: 4px; border: 1px #CCC solid; width: 100px;}
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            var $rows = $('#table tr');
-            $('#search').keyup(function() {
-                var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-
-                $rows.show().filter(function() {
-                    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-                    return !~text.indexOf(val);
-                }).hide();
-            });
-        });
-    </script>
 </head>
 <body>
-<input type="text" id="search" placeholder="Type to search">
-<table id="table">
     <?php
-    $connection = mysql_connect('localhost', 'root', '');
+    $connection = mysql_connect('127.0.0.1', 'root', '');
     if (!$connection){
         die("Database Connection Failed" . mysql_error());
     }
@@ -34,20 +19,40 @@
         die("Database Selection Failed" . mysql_error());
     }
     //3.1.2 Checking the values are existing in the database or not
-    $query = "SELECT * FROM `clases`  LIMIT 10";
+    $query = "SELECT horario FROM `examenes` GROUP BY horario ";
 
     $result = mysql_query($query) or die(mysql_error());
     $count = mysql_num_rows($result);
+    echo "<select>";
     while($row = mysql_fetch_assoc($result)){
-
-        //print("<p>". $row ."</p>");
-        print("<tr><td class='celda' >". $row['Nombre']. "</td>");
-        print("<td class='celda' >". $row['Profesor']. "</td>");
-        print("<td class='celda'><input type='button' onclick='eliminar(". $row['Clave'] . ")' value='consultar'/></td></tr>");
+        echo "<option value=' " . $row['horario']." '>".$row['horario']."</option>";
     }
+    echo "</select>";
 
 
     ?>
-</table>
+    <?php
+    $connection = mysql_connect('127.0.0.1', 'root', '');
+    if (!$connection){
+        die("Database Connection Failed" . mysql_error());
+    }
+    $select_db = mysql_select_db('horarios');
+    if (!$select_db){
+        die("Database Selection Failed" . mysql_error());
+    }
+    //3.1.2 Checking the values are existing in the database or not
+    $query = "SELECT dias FROM `examenes` GROUP BY dias ";
+
+    $result = mysql_query($query) or die(mysql_error());
+    $count = mysql_num_rows($result);
+    echo "<select>";
+    while($row = mysql_fetch_assoc($result)){
+        echo "<option value=' " . $row['dias']." '>".$row['dias']."</option>";
+    }
+    echo "</select>";
+
+
+    ?>
+<input type="button" value="¿Cuándo presento?" onclick="getExam()" />
 </body>
 </html>
