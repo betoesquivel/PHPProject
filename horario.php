@@ -25,9 +25,14 @@
     $count = mysql_num_rows($result);
     ?>
     <div class="row">
+        <h1 class="text-center columns">
+            &iexcl;Revisa cu&aacute;ndo presentas!
+        </h1>
+    </div>
+    <div class="row">
 
     <?php
-    echo '<select class="large-offset-3 medium-offset-3 large-6 medium-6 end columns" id="hora">';
+    echo '<select data-bind="value: selectedTime" class="large-offset-3 medium-offset-3 large-6 medium-6 end columns" id="hora">';
     while($row = mysql_fetch_assoc($result)){
         echo "<option value=' " . $row['horario']." '>".$row['horario']."</option>";
     }
@@ -53,7 +58,7 @@
     <div class="row">
 
     <?php
-    echo '<select class="large-offset-3 medium-offset-3 large-6 medium-6 end columns" id="dia">';
+    echo '<select data-bind="value: selectedDays" class="large-offset-3 medium-offset-3 large-6 medium-6 end columns" id="dia">';
     while($row = mysql_fetch_assoc($result)){
         echo "<option value=' " . $row['dias']." '>".$row['dias']."</option>";
     }
@@ -67,10 +72,31 @@
 
 <br><br>
     <div class="row">
-        <div data-alert class="alert-box alert round large-offset-3 medium-offset-3 large-6 medium-6 end columns"
+        <div data-bind="value: examDate" data-alert style="display: none;" class="text-center alert-box round large-offset-3 medium-offset-3 large-6 medium-6 end columns"
              id="lblExamen">
         </div>
     </div>
+    <div id="link" data-bind="visible: visibleExam" style="display: none;" class="row">
+        <input type="text" data-bind="textInput: className"/>
+        <a class="text-center large-offset-3 medium-offset-3 large-6 medium-6 end columns"
+           data-bind="click: addExam">
+            Agregar a tabla: <span style="color: royalblue;" data-bind="text: className"/>
+        </a>
+    </div>
+    <table class="row">
+        <thead>
+            <tr>
+                <th>Clase</th>
+                <th>Examen</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: exams">
+            <tr>
+                <td data-bind="text: className()"></td>
+                <td data-bind="text: examDate()"></td>
+            </tr>
+        </tbody>
+    </table>
     <script src="jquery.js"></script>
     <script src="foundation.min.js"></script>
     <script src="knockout-3.3.0.js"></script>
