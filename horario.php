@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript" src="ayudante.js"></script>
     <style>
         body {padding: 20px;}
         input {margin-bottom: 5px; padding: 2px 3px; width: 209px;}
@@ -23,7 +24,7 @@
 
     $result = mysql_query($query) or die(mysql_error());
     $count = mysql_num_rows($result);
-    echo "<select>";
+    echo "<select id='hora'>";
     while($row = mysql_fetch_assoc($result)){
         echo "<option value=' " . $row['horario']." '>".$row['horario']."</option>";
     }
@@ -45,7 +46,7 @@
 
     $result = mysql_query($query) or die(mysql_error());
     $count = mysql_num_rows($result);
-    echo "<select>";
+    echo "<select id='dia'>";
     while($row = mysql_fetch_assoc($result)){
         echo "<option value=' " . $row['dias']." '>".$row['dias']."</option>";
     }
@@ -54,5 +55,8 @@
 
     ?>
 <input type="button" value="¿Cuándo presento?" onclick="getExam()" />
+
+<br><br>
+<h1 id="lblExamen"></h1>
 </body>
 </html>
