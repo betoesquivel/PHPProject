@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a3a242d-f6e3-4e1f-93b8-8d7848a47651" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ayudante.js" afterPath="$PROJECT_DIR$/ayudante.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getFinalExam.php" afterPath="$PROJECT_DIR$/getFinalExam.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/horario.php" afterPath="$PROJECT_DIR$/horario.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PHPProyect.iws" />
@@ -28,14 +30,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="horario.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="horario.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/horario.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.591133" vertical-offset="0" max-vertical-offset="1134">
-              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            <state vertical-scroll-proportion="-19.222221" vertical-offset="543" max-vertical-offset="1206">
+              <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
               <folding>
-                <marker date="1430784163983" expanded="true" signature="696:743" placeholder="SELECT horar..." />
-                <marker date="1430784163983" expanded="true" signature="1402:1443" placeholder="SELECT dias ..." />
+                <marker date="1430784915207" expanded="true" signature="759:806" placeholder="SELECT horar..." />
+                <marker date="1430784915207" expanded="true" signature="1475:1516" placeholder="SELECT dias ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ayudante.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ayudante.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.055469953" vertical-offset="0" max-vertical-offset="649">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getFinalExam.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getFinalExam.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="612">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+              <folding>
+                <marker date="1430785160047" expanded="true" signature="327:406" placeholder="SELECT fecha..examenes..." />
               </folding>
             </state>
           </provider>
@@ -63,6 +87,8 @@
       <list>
         <option value="$PROJECT_DIR$/getHorario.php" />
         <option value="$PROJECT_DIR$/horario.php" />
+        <option value="$PROJECT_DIR$/getFinalExam.php" />
+        <option value="$PROJECT_DIR$/ayudante.js" />
       </list>
     </option>
   </component>
@@ -232,8 +258,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1044">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1430784163983" expanded="true" signature="696:743" placeholder="SELECT horar..." />
-            <marker date="1430784163983" expanded="true" signature="1402:1443" placeholder="SELECT dias ..." />
+            <marker date="1430784915207" expanded="true" signature="759:806" placeholder="SELECT horar..." />
+            <marker date="1430784915207" expanded="true" signature="1475:1516" placeholder="SELECT dias ..." />
           </folding>
         </state>
       </provider>
@@ -265,14 +291,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/getFinalExam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="612">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding>
+            <marker date="1430785160047" expanded="true" signature="327:406" placeholder="SELECT fecha..examenes..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/horario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.591133" vertical-offset="0" max-vertical-offset="1134">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        <state vertical-scroll-proportion="-19.222221" vertical-offset="543" max-vertical-offset="1206">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
           <folding>
-            <marker date="1430784163983" expanded="true" signature="696:743" placeholder="SELECT horar..." />
-            <marker date="1430784163983" expanded="true" signature="1402:1443" placeholder="SELECT dias ..." />
+            <marker date="1430784915207" expanded="true" signature="759:806" placeholder="SELECT horar..." />
+            <marker date="1430784915207" expanded="true" signature="1475:1516" placeholder="SELECT dias ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ayudante.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.055469953" vertical-offset="0" max-vertical-offset="649">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
